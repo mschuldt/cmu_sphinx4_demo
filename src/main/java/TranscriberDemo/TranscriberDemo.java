@@ -14,9 +14,9 @@ public class TranscriberDemo {
 
         Configuration configuration = new Configuration();
 
-        configuration.setAcousticModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us");
-        configuration.setDictionaryPath("resource:/edu/cmu/sphinx/models/en-us/cmudict-en-us.dict");
-        configuration.setLanguageModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us.lm.bin");
+        configuration.setAcousticModelPath("/home/schuldt/a/src/sphinx4/sphinx4-data/src/main/resources/edu/cmu/sphinx/models/en-us/en-us");
+        configuration.setDictionaryPath("/home/schuldt/a/src/sphinx4/sphinx4-data/src/main/resources/edu/cmu/sphinx/models/en-us/cmudict-en-us.dict");
+        configuration.setLanguageModelPath("/home/schuldt/a/src/sphinx4/sphinx4-data/src/main/resources/edu/cmu/sphinx/models/en-us/en-us.lm.bin");
 
 	StreamSpeechRecognizer recognizer = new StreamSpeechRecognizer(configuration);
 	InputStream stream = new FileInputStream(new File("test.wav"));
