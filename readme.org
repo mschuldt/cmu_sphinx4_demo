@@ -1,0 +1,21 @@
+Building and running a minimal Sphynx4 demo on Linux without an IDE
+
+Based on code and instructions from:  https://cmusphinx.github.io/wiki/tutorialsphinx4/
+
+Build: =gradle build=
+
+Run: =./run.sh=
+
+Notes:
+
+- Could only get it to work with the directory structure: src/main/java/DEMO/DEMO.java
+- Configuration filenames in the demo file needed to be fixed
+- =test.wav= copied from sphinx4/sphinx4-samples/build/resources/main/edu/cmu/sphinx/demo/speakerid/test.wav
+- Ran =mvn install= but I'm not sure if it was actually needed
+- =SPHINX_SRC= in run.sh and the configuration filepaths in =TranscriberDemo.java= need to be updated with the sphynx4 source directory path
+
+Some build system notes, not mentioned in the instructions (probably obvious if you understand it):
+
+- At top of =build.gradle= add: ~apply plugin: 'java'~
+- Dependencies in =pom.xml= need to wrap with a 'dependencies' tag
+- Other attributes needed for the =pom.xml= project:  modelVersion, groupId, artifactId, and version
